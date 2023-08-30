@@ -1,0 +1,25 @@
+/* src/components/MovieList.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 20px; /* Adjust gap between grid items */
+  }
+  
+  .grid-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    max-width: 150px; /* Adjust thumbnail size */
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .video-div > div {
+    width: 100% !important;
+}
+
