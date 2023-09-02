@@ -28,6 +28,12 @@ const VideoPlayer = ({ match }) => {
     const [signedUrl, setSignedUrl] = useState('');
     //const movieKey = decodeURIComponent(match.params.movieKey);
     useEffect(() => {
+      const token = localStorage.getItem('token');
+
+      if (!token) {
+        // Token is not set, redirect to the login page
+        window.location.href = '/';
+      }
         const s3 = new AWS.S3();
         const params = {
           Bucket: 'movie-bucket-latest',

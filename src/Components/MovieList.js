@@ -45,6 +45,13 @@ const MovieList = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
+        // Check if the token is set in local storage
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      // Token is not set, redirect to the login page
+      window.location.href = '/';
+    }
     // Fetch movie list from S3 bucket
     const s3 = new AWS.S3();
     async function fetchMovies() {

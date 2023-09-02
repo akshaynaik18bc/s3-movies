@@ -9,6 +9,7 @@
     "@vidstack/player": "^1.6.5",
     "@vidstack/player-react": "^1.6.5",
     "aws-sdk": "^2.1447.0",
+    "crypto-js": "^4.1.1",
     "lit": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
