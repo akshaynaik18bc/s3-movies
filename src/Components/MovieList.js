@@ -39,13 +39,14 @@
 import './MovieList.css'; // Import the CSS file
 // src/components/MovieList.js
 import React, { useState, useEffect } from 'react';
-import { s3 } from '../awsConfig';
-
+//import { s3 } from '../awsConfig';
+import AWS from '../awsConfig';
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     // Fetch movie list from S3 bucket
+    const s3 = new AWS.S3();
     async function fetchMovies() {
       try {
         const response = await s3.listObjectsV2({ Bucket: 'movie-bucket-latest' }).promise();
