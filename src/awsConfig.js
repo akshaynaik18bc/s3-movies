@@ -3,8 +3,8 @@ import AWS from 'aws-sdk';
 
 const config = {
   accessKeyId: process.env.ACCESS_KEY,
-  secretAccessKey: SECRET_KEY,
-  region: REGION,
+  secretAccessKey: process.env.SECRET_KEY,
+  region: process.env.REGION,
 };
 
 AWS.config.update(config);
