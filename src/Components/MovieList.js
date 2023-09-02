@@ -65,7 +65,7 @@ const MovieList = () => {
       <div className="grid-container">
         {movies.map((movie, index) => (
           <div  key={index}>
-          <a href={`/player/${encodeURIComponent(movie)}`}>
+          <a href={`/player2/${encodeURIComponent(movie)}`}>
           <div className="grid-item" key={index}>
             <img
               src="https://viveklive.in/images/video-thumbnail.png" // Use your actual thumbnail URL here
